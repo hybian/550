@@ -1,0 +1,16 @@
+module AuctionApp{ 
+	struct Item{
+		string seller;
+		string itemDescr;
+		string iniPrice;
+	};
+
+	interface Auction{ 
+		string offer_item(in Item item); 
+		string sell(in string userID);
+		string bid(in string userID, in string price);
+		string view_high_bidder(in string userID);
+		string view_bid_status(in string userID);
+		string view_auction_status(in string userID);
+   }; 
+};
